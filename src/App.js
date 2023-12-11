@@ -1,25 +1,66 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import ContactPage from './components/EmailClient/ContactPage';
+import CalendarPage from './components/EmailClient/CalendarPage';
+import Main from './components/EmailClient/Main';
+import Navb from './items/Navbar';
+import ReportTable from './items/grid';
 
-function App() {
+
+
+const App = () => {
+  const reportData = [
+    {
+        "            ": "Today",
+        "Lead View": "0",
+        "Lead Created": "0",
+        "Email Added": "0",
+        "Contact Added": "0",
+        "Decision Date": "0",
+        "Expire Date": "0",
+        "LOA sent": "0",
+        "Signed LOA": "0"
+    },
+    {
+        "            ": "Current Week",
+        "Lead View": "0",
+        "Lead Created": "0",
+        "Email Added": "0",
+        "Contact Added": "0",
+        "Decision Date": "0",
+        "Expire Date": "0",
+        "LOA sent": "0",
+        "Signed LOA": "0"
+    },
+    {
+        "            ": "Current Month",
+        "Lead View": "0",
+        "Lead Created": "0",
+        "Email Added": "0",
+        "Contact Added": "0",
+        "Decision Date": "0",
+        "Expire Date": "0",
+        "LOA sent": "0",
+        "Signed LOA": "0"
+    },
+    // ... more data
+];
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+
+      <div>
+        
+        <Navb/>
+        <br/>
+        <Routes>
+          <Route path="/contacts" element={<ContactPage />} />
+          <Route path="/calendar" element={<CalendarPage />} />
+          <Route path="/" element={<Main />} />
+        </Routes>
+      </div>
+      <ReportTable reportData={reportData} />
+    </Router>
   );
-}
+};
 
 export default App;
