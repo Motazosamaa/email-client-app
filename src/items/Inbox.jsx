@@ -4,21 +4,22 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 function Inbox() {
   return (
-    <div>
+    <div className="w-100">
+    
       <link
         href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
         rel="stylesheet"
       />
-        <div className="container-fluid">
-        <div className="row">
+        <div className=" w-100 p-0">
+        <div className="row mx-0">
           <div className="col-md-12">
             <div className="grid email">
               <div className="grid-body">
-                <div className="row">
+                <div className="row mx-0">
                   
 
                   <div className="col-md-12">
-                    <div className="row">
+                    <div className="row mx-0">
                       <div className="col-sm-6">
                         <label
 

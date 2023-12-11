@@ -58,7 +58,6 @@ const App = () => {
           <Route path="/" element={<Main />} />
         </Routes>
       </div>
-      <ReportTable reportData={reportData} />
     </Router>
   );
 };

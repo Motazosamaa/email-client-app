@@ -107,7 +107,7 @@ const MainPanel = ({
         return renderEmailContent();
       case "notes":
         return (
-          <div>
+          <div >
             {selectedContact && (
               <div>
                 <br />

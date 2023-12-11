@@ -1,12 +1,13 @@
-import React from 'react';
-import ListGroup from 'react-bootstrap/ListGroup';
-import Contactcard from './Contactcard';
+import React from "react";
+import ListGroup from "react-bootstrap/ListGroup";
+import Contactcard from "./Contactcard";
+import { Link, useNavigate } from "react-router-dom";
 
 const Avatar = ({ name, imageSrc }) => {
   const initials = name
-    .split(' ')
+    .split(" ")
     .map((part) => part.charAt(0))
-    .join('')
+    .join("")
     .toUpperCase();
 
   return (
@@ -26,11 +27,13 @@ const ContactColumn = ({ selectedCompany, onSelectContact }) => {
       {selectedCompany && (
         <ListGroup>
           {selectedCompany.contacts.map((contact, index) => (
-            <Contactcard
-              key={index}
-              contact={contact}
-              onSelectContact={() => onSelectContact(contact)}
-            />
+            <Link to="contacts" state={selectedCompany}>
+              <Contactcard
+                key={index}
+                contact={contact}
+                onSelectContact={() => onSelectContact(contact)}
+              />
+            </Link>
           ))}
         </ListGroup>
       )}

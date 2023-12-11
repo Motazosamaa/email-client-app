@@ -5,7 +5,7 @@ const ContactCard = ({ contact, onSelectContact }) => {
   return (
     <Card
       key={contact.name}
-      style={{ width: '18rem', marginBottom: '10px' }}
+      style={{ width: '18rem'}}
       onClick={onSelectContact}
     >
       <Card.Body>
