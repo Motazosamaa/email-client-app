@@ -17,14 +17,16 @@ const CompanyList = ({ companies, onSelectCompany }) => {
   );
 
   return (
-    <>
+    <div style={{ maxHeight: "700px", overflowY: "auto" }}>
       <ListGroup>
         <input
           type="text"
           placeholder="Search..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
+          style={{ maxWidth: "400px", overflowY: "auto" }}
         />
+        <br/>
         {filteredCompanies.map((company, index) => (
           <ListGroup.Item
             action
@@ -43,7 +45,7 @@ const CompanyList = ({ companies, onSelectCompany }) => {
           </ListGroup.Item>
         ))}
       </ListGroup>
-    </>
+    </div>
   );
 };
 
