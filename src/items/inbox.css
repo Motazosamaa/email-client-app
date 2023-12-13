@@ -72,6 +72,14 @@ body{
 .email table tr.read > td {
 	font-weight: 400;
 }
+.table-responsive {
+    max-height: 500px; /* Adjust this value as needed */
+    overflow-y: auto;
+  }
+  .modal-body {
+    max-height: 400px; /* Adjust this value as needed */
+    overflow-y: auto;
+  }
 
 .email table tr td > i.fa {
 	font-size: 1.2em;
@@ -143,6 +151,8 @@ body{
     padding: 15px 20px 15px 20px;
     font-size: 0.9em;
     line-height: 1.9em;
+    max-height: 700px;
+    overflow-y: auto;
 }
 
 .grid .full {
