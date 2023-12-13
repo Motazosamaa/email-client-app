@@ -11,6 +11,9 @@ body{
 .email .btn.search {
 	font-size: 0.9em;
 }
+.unread {
+    color: #888; /* Adjust the color to your preference */
+  }
 
 .email h2 {
 	margin-top: 0;
