@@ -229,3 +229,24 @@ body{
     border-bottom-width: 4px !important;
     border-bottom-style: solid !important;
 }
+@media (max-width: 1433px) {
+    .grid.email {
+      padding: 10px; /* Adjust padding as needed for smaller screens */
+    }
+  
+    .grid .grid-body {
+      padding: 10px;
+      max-height: none; /* Allow content to overflow on smaller screens */
+      overflow-y: auto;
+    }
+  
+    .email table tr td > i.fa {
+      font-size: 1em; /* Adjust icon size for smaller screens */
+    }
+  
+    .table-responsive,
+    .modal-body {
+      max-height: none; /* Allow content to overflow on smaller screens */
+      overflow-y: auto;
+    }
+  }

@@ -31,74 +31,80 @@ const Inbox = () => {
   };
 
   return (
-    <div className="w-100">
+    <div className="container-fluid">
       <link
         href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
         rel="stylesheet"
       />
-      <div className="w-100 p-0">
-        <div className="row mx-0">
-          <div className="col-md-12">
-            <div className="grid email">
-              <div className="grid-body">
-                <div className="row mx-0">
-                  {selectedMessage ? (
-                    <div className="col-md-12">
-                      <button
-                        type="button"
-                        className="close"
-                        onClick={handleCloseMessage}
-                      >
-                        ×
-                      </button>
-                      <h4 className="modal-title">
-                        <i className="fa fa-envelope"></i> {selectedMessage.sender}
-                      </h4>
-                      <div className="modal-body">
-                        <p>{selectedMessage.text}</p>
-                        <div className="reply-section">
-                          <div className="dropdown">
-                            <button
-                              className="btn btn-secondary dropdown-toggle"
-                              type="button"
-                              id="replyDropdown"
-                              data-toggle="dropdown"
-                              aria-haspopup="true"
-                              aria-expanded="false"
-                            >
-                              Reply
-                            </button>
-                            <div className="dropdown-menu" aria-labelledby="replyDropdown">
-                              {replies.map((reply, index) => (
-                                <span
-                                  key={index}
-                                  className="dropdown-item"
-                                  onClick={() => handleReply(reply)}
-                                >
-                                  {reply}
-                                </span>
-                              ))}
-                            </div>
-                          </div>
-                          <textarea
-                            readOnly
-                            value={replyText}
-                            onChange={(e) => setReplyText(e.target.value)}
-                            placeholder="Select Message "
-                            className="form-control mt-2"
-                          ></textarea>
+    <div className="row">
+        <div className="col-md-12">
+          <div className="grid email">
+            <div className="grid-body">
+              {selectedMessage ? (
+                <div className="row">
+                  <div className="col-md-12">
+                    <button
+                      type="button"
+                      className="close"
+                      onClick={handleCloseMessage}
+                    >
+                      ×
+                    </button>
+                    <h4 className="modal-title">
+                      <i className="fa fa-envelope"></i>{" "}
+                      {selectedMessage.sender}
+                    </h4>
+                    <div className="modal-body">
+                      <p>{selectedMessage.text}</p>
+                      <div className="reply-section">
+                        <div className="dropdown">
                           <button
-                            className="btn btn-primary mt-2"
-                            onClick={handleSendReply}
+                            className="btn btn-secondary dropdown-toggle"
+                            type="button"
+                            id="replyDropdown"
+                            data-toggle="dropdown"
+                            aria-haspopup="true"
+                            aria-expanded="false"
                           >
-                            Send Reply
+                            Reply
                           </button>
+                          <div
+                            className="dropdown-menu"
+                            aria-labelledby="replyDropdown"
+                          >
+                            {replies.map((reply, index) => (
+                              <span
+                                key={index}
+                                className="dropdown-item"
+                                onClick={() => handleReply(reply)}
+                              >
+                                {reply}
+                              </span>
+                            ))}
+                          </div>
                         </div>
+                        <textarea
+                          readOnly
+                          value={replyText}
+                          onChange={(e) => setReplyText(e.target.value)}
+                          placeholder="Select Message "
+                          className="form-control mt-2"
+                        ></textarea>
+                        <button
+                          className="btn btn-primary mt-2"
+                          onClick={handleSendReply}
+                        >
+                          Send Reply
+                        </button>
                       </div>
                     </div>
-                  ) : (
-                    <div className="col-md-12">
-                      <div className="row mx-0">
+                  </div>
+                </div>
+              ) : (
+                <>
+                
+                    <div className="row">
+                    
                         <div className="col-sm-6">
                           <label className="">
                             <div className="icheckbox_square-blue">
@@ -157,13 +163,15 @@ const Inbox = () => {
                       <div className="padding"></div>
 
                       <div className="table-responsive">
-                        <table className="table">
-                          <tbody>
-                            {messages.map((message, index) => (
-                              <tr
-                                key={index}
-                                className={unreadMessages.has(message) ? "unread" : ""}
-                              >
+                    <table className="table">
+                      <tbody>
+                        {messages.map((message, index) => (
+                          <tr
+                            key={index}
+                            className={
+                              unreadMessages.has(message) ? "unread" : ""
+                            }
+                          >
                                 <td className="action">
                                   <input type="checkbox" />
                                 </td>
@@ -229,17 +237,17 @@ const Inbox = () => {
                           <a href="#/">»</a>
                         </li>
                       </ul>
-                    </div>
+
+                      </>
+   
                   )}
+                  </div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
+          );
+        };
 
 const messages = [
   { sender: "Gmail", subject: "This Message Sent By Gmail and so on ", time: "11:30 PM", text: "If you want to reset password click the link below ..." },

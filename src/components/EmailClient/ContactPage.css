@@ -1,0 +1,16 @@
+.full-height-modal {
+    display: flex;
+    align-items: stretch;
+    height: 100%;
+  }
+  
+  .modal-content {
+    height: 100%;
+  }
+  
+  .modal-body {
+    overflow-y: auto; 
+  }
+  .my-full-width {
+    width: 100% !important;
+  }

@@ -1,0 +1,10 @@
+{
+  "name": "Email Client App",
+  "short_name": "Email Client",
+  "description": "A simple email client application",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#3498db",
+  "background_color": "#ffffff",
+  "icons": []
+}

@@ -6,15 +6,29 @@ const exampleCompanies = [
         name: 'John Doe',
         email: 'john.doe@example.com',
         phone: '123-456-7890',
-        address: '123 Main St, Cityville',
+        address: {
+          street: '123 Main St',
+          city: 'Cityville',
+          state: 'California',
+          zip: '90001'
+        },
         notes: 'Some notes about John.',
+        status: Math.random() < 0.5 ? 'Active' : 'Inactive',
+        lastView: getRandomDate(),
       },
       {
         name: 'Alice Johnson',
         email: 'alice.johnson@example.com',
         phone: '987-654-3210',
-        address: '456 Oak St, Townsville',
+        address: {
+          street: '456 Oak St',
+          city: 'Townsville',
+          state: 'California',
+          zip: '90001'
+        },
         notes: 'Some notes about Alice.',
+        status: Math.random() < 0.5 ? 'Active' : 'Inactive',
+        lastView: getRandomDate(),
       },
     ],
   },
@@ -25,8 +39,15 @@ const exampleCompanies = [
         name: 'Jane Smith',
         email: 'jane.smith@example.com',
         phone: '555-555-5555',
-        address: '789 Pine St, Villagetown',
+        address: {
+          street: '789 Pine St',
+          city: 'Villagetown',
+          state: 'California',
+          zip: '90001'
+        },
         notes: 'Some notes about Jane.',
+        status: Math.random() < 0.5 ? 'Active' : 'Inactive',
+        lastView: getRandomDate(),
       },
     ],
   },
@@ -37,15 +58,29 @@ const exampleCompanies = [
         name: 'Bob Brown',
         email: 'bob.brown@example.com',
         phone: '777-888-9999',
-        address: '101 Elm St, Hamletville',
+        address: {
+          street: '101 Elm St',
+          city: 'Hamletville',
+          state: 'California',
+          zip: '90001'
+        },
         notes: 'Some notes about Bob.',
+        status: Math.random() < 0.5 ? 'Active' : 'Inactive',
+        lastView: getRandomDate(),
       },
       {
         name: 'Eva Williams',
         email: 'eva.williams@example.com',
         phone: '444-333-2222',
-        address: '202 Cedar St, Riverside',
+        address: {
+          street: '202 Cedar St',
+          city: 'Riverside',
+          state: 'California',
+          zip: '90001'
+        },
         notes: 'Some notes about Eva.',
+        status: Math.random() < 0.5 ? 'Active' : 'Inactive',
+        lastView: getRandomDate(),
       },
     ],
   },
@@ -56,8 +91,15 @@ const exampleCompanies = [
         name: 'Charlie Davis',
         email: 'charlie.davis@example.com',
         phone: '111-222-3333',
-        address: '303 Maple St, Countryside',
+        address: {
+          street: '303 Maple St',
+          city: 'Countryside',
+          state: 'California',
+          zip: '90001'
+        },
         notes: 'Some notes about Charlie.',
+        status: Math.random() < 0.5 ? 'Active' : 'Inactive',
+        lastView: getRandomDate(),
       },
     ],
   },
@@ -68,8 +110,15 @@ const exampleCompanies = [
         name: 'David Smith',
         email: 'david.smith@example.com',
         phone: '555-123-4567',
-        address: '789 Oak St, Suburbia',
+        address: {
+          street: '789 Oak St',
+          city: 'Suburbia',
+          state: 'California',
+          zip: '90001'
+        },
         notes: 'Some notes about David.',
+        status: Math.random() < 0.5 ? 'Active' : 'Inactive',
+        lastView: getRandomDate(),
       },
     ],
   },
@@ -80,8 +129,15 @@ const exampleCompanies = [
         name: 'Emma White',
         email: 'emma.white@example.com',
         phone: '987-654-3210',
-        address: '101 Pine St, Metropolis',
+        address: {
+          street: '101 Pine St',
+          city: 'Metropolis',
+          state: 'California',
+          zip: '90001'
+        },
         notes: 'Some notes about Emma.',
+        status: Math.random() < 0.5 ? 'Active' : 'Inactive',
+        lastView: getRandomDate(),
       },
     ],
   },
@@ -92,8 +148,15 @@ const exampleCompanies = [
         name: 'Frank Johnson',
         email: 'frank.johnson@example.com',
         phone: '777-888-9999',
-        address: '202 Cedar St, Megacity',
+        address: {
+          street: '202 Cedar St',
+          city: 'Megacity',
+          state: 'California',
+          zip: '90001'
+        },
         notes: 'Some notes about Frank.',
+        status: Math.random() < 0.5 ? 'Active' : 'Inactive',
+        lastView: getRandomDate(),
       },
     ],
   },
@@ -104,8 +167,15 @@ const exampleCompanies = [
         name: 'Grace Davis',
         email: 'grace.davis@example.com',
         phone: '111-222-3333',
-        address: '303 Maple St, Urbanville',
+        address: {
+          street: '303 Maple St',
+          city: 'Urbanville',
+          state: 'California',
+          zip: '90001'
+        },
         notes: 'Some notes about Grace.',
+        status: Math.random() < 0.5 ? 'Active' : 'Inactive',
+        lastView: getRandomDate(),
       },
     ],
   },
@@ -116,8 +186,15 @@ const exampleCompanies = [
         name: 'Henry Smith',
         email: 'henry.smith@example.com',
         phone: '555-123-4567',
-        address: '789 Oak St, City Central',
+        address: {
+          street: '789 Oak St',
+          city: 'City Central',
+          state: 'California',
+          zip: '90001'
+        },
         notes: 'Some notes about Henry.',
+        status: Math.random() < 0.5 ? 'Active' : 'Inactive',
+        lastView: getRandomDate(),
       },
     ],
   },
@@ -128,8 +205,15 @@ const exampleCompanies = [
         name: 'Isabel Brown',
         email: 'isabel.brown@example.com',
         phone: '987-654-3210',
-        address: '101 Pine St, Downtown',
+        address: {
+          street: '101 Pine St',
+          city: 'Downtown',
+          state: 'California',
+          zip: '90001'
+        },
         notes: 'Some notes about Isabel.',
+        status: Math.random() < 0.5 ? 'Active' : 'Inactive',
+        lastView: getRandomDate(),
       },
     ],
   },
@@ -140,8 +224,15 @@ const exampleCompanies = [
         name: 'Jack Davis',
         email: 'jack.davis@example.com',
         phone: '777-888-9999',
-        address: '202 Cedar St, Financial District',
+        address: {
+          street: '202 Cedar St',
+          city: 'Financial District',
+          state: 'California',
+          zip: '90001'
+        },
         notes: 'Some notes about Jack.',
+        status: Math.random() < 0.5 ? 'Active' : 'Inactive',
+        lastView: getRandomDate(),
       },
     ],
   },
@@ -152,8 +243,15 @@ const exampleCompanies = [
         name: 'Katherine White',
         email: 'katherine.white@example.com',
         phone: '111-222-3333',
-        address: '303 Maple St, Tech Park',
+        address: {
+          street: '303 Maple St',
+          city: 'Tech Park',
+          state: 'California',
+          zip: '90001'
+        },
         notes: 'Some notes about Katherine.',
+        status: Math.random() < 0.5 ? 'Active' : 'Inactive',
+        lastView: getRandomDate(),
       },
     ],
   },
@@ -164,8 +262,15 @@ const exampleCompanies = [
         name: 'Liam Johnson',
         email: 'liam.johnson@example.com',
         phone: '555-123-4567',
-        address: '789 Oak St, Science Hub',
+        address: {
+          street: '789 Oak St',
+          city: 'Science Hub',
+          state: 'California',
+          zip: '90001'
+        },
         notes: 'Some notes about Liam.',
+        status: Math.random() < 0.5 ? 'Active' : 'Inactive',
+        lastView: getRandomDate(),
       },
     ],
   },
@@ -176,8 +281,15 @@ const exampleCompanies = [
         name: 'Mia Davis',
         email: 'mia.davis@example.com',
         phone: '987-654-3210',
-        address: '101 Pine St, Industrial Area',
+        address: {
+          street: '101 Pine St',
+          city: 'Industrial Area',
+          state: 'California',
+          zip: '90001'
+        },
         notes: 'Some notes about Mia.',
+        status: Math.random() < 0.5 ? 'Active' : 'Inactive',
+        lastView: getRandomDate(),
       },
     ],
   },
@@ -188,8 +300,15 @@ const exampleCompanies = [
         name: 'Noah Smith',
         email: 'noah.smith@example.com',
         phone: '777-888-9999',
-        address: '202 Cedar St, Research Zone',
+        address: {
+          street: '202 Cedar St',
+          city: 'Research Zone',
+          state: 'California',
+          zip: '90001'
+        },
         notes: 'Some notes about Noah.',
+        status: Math.random() < 0.5 ? 'Active' : 'Inactive',
+        lastView: getRandomDate(),
       },
     ],
   },
@@ -200,8 +319,15 @@ const exampleCompanies = [
         name: 'Olivia White',
         email: 'olivia.white@example.com',
         phone: '111-222-3333',
-        address: '303 Maple St, Business District',
+        address: {
+          street: '303 Maple St',
+          city: 'Business District',
+          state: 'California',
+          zip: '90001'
+        },
         notes: 'Some notes about Olivia.',
+        status: Math.random() < 0.5 ? 'Active' : 'Inactive',
+        lastView: getRandomDate(),
       },
     ],
   },
@@ -212,8 +338,15 @@ const exampleCompanies = [
         name: 'Peter Brown',
         email: 'peter.brown@example.com',
         phone: '555-123-4567',
-        address: '789 Oak St, Innovation Park',
+        address: {
+          street: '789 Oak St',
+          city: 'Innovation Park',
+          state: 'California',
+          zip: '90001'
+        },
         notes: 'Some notes about Peter.',
+        status: Math.random() < 0.5 ? 'Active' : 'Inactive',
+        lastView: getRandomDate(),
       },
     ],
   },
@@ -221,3 +354,15 @@ const exampleCompanies = [
 ];
 
 export default exampleCompanies;
+
+
+function getRandomDate() {
+  const currentDate = new Date();
+  const lastYear = currentDate.getFullYear() - 1;
+  const randomMonth = Math.floor(Math.random() * 12);
+  const randomDay = Math.floor(Math.random() * 28) + 1; // Assume 28 days in a month for simplicity
+  const randomHour = Math.floor(Math.random() * 24);
+  const randomMinute = Math.floor(Math.random() * 60);
+
+  return new Date(lastYear, randomMonth, randomDay, randomHour, randomMinute);
+}

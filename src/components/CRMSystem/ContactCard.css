@@ -1,0 +1,33 @@
+.custom-contact-card {
+    width: 18rem;
+    margin: 25px;
+    border-radius: 10px;
+    transition: transform 0.2s, background-color 0.2s;
+  }
+  
+  .custom-contact-card:hover {
+    transform: scale(1.05);
+    background-color: #e0e8fa; /* Light blue on hover */
+  }
+  
+  .contact-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #1e88e5; /* Blue for the name */
+  }
+  
+  .contact-notes {
+    font-style: italic;
+    color: #757575; /* Gray for the notes */
+  }
+  
+  .edit-button {
+    width: 100%;
+    background-color: #4caf50; /* Green button */
+    border-color: #4caf50;
+  }
+  
+  .edit-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+  }
+  
